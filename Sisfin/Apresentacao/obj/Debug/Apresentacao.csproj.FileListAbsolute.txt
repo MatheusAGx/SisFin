@@ -1,0 +1,15 @@
+C:\Users\aluno\Desktop\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\aluno\Desktop\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\aluno\Desktop\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\aluno\Desktop\Apresentacao\bin\Debug\Dados.dll
+C:\Users\aluno\Desktop\Apresentacao\bin\Debug\Negocio.dll
+C:\Users\aluno\Desktop\Apresentacao\bin\Debug\Dados.pdb
+C:\Users\aluno\Desktop\Apresentacao\bin\Debug\Negocio.pdb
+C:\Users\aluno\Desktop\Apresentacao\obj\Debug\Apresentacao.csproj.AssemblyReference.cache
+C:\Users\aluno\Desktop\Apresentacao\obj\Debug\Apresentacao.frmCliente.resources
+C:\Users\aluno\Desktop\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\aluno\Desktop\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.cache
+C:\Users\aluno\Desktop\Apresentacao\obj\Debug\Apresentacao.csproj.CoreCompileInputs.cache
+C:\Users\aluno\Desktop\Apresentacao\obj\Debug\Apresentacao.csproj.CopyComplete
+C:\Users\aluno\Desktop\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\aluno\Desktop\Apresentacao\obj\Debug\Apresentacao.pdb
