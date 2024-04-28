@@ -1,1 +1,1 @@
-# SisFin
+Sistema financeiro utilizando conceitos de Programação Orienteada a Objetos e estruturado por camadas. Foi utilizando da linguagem C#, cuja arquitetura permite a conexão com o banco de dados e realização total do CRUD, assim como outros métodos básicos.
