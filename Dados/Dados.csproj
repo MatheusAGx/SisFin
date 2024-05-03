@@ -41,6 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caixa.cs" />
+    <Compile Include="CaixaRepository.cs" />
+    <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaRepository.cs" />
+    <Compile Include="Compra.cs" />
+    <Compile Include="CompraRepository.cs" />
+    <Compile Include="Conta.cs" />
+    <Compile Include="ContaPagar.cs" />
+    <Compile Include="ContaPagarRepository.cs" />
+    <Compile Include="ContaReceber.cs" />
+    <Compile Include="ContaReceberRepository.cs" />
+    <Compile Include="ContaRepository.cs" />
+    <Compile Include="ControleCaixa.cs" />
+    <Compile Include="ControleCaixaRepository.cs" />
+    <Compile Include="Fornecedor.cs" />
+    <Compile Include="FornecedorRepository.cs" />
+    <Compile Include="ItemCompra.cs" />
+    <Compile Include="ItemCompraRepository.cs" />
     <Compile Include="ItemVenda.cs" />
     <Compile Include="ItemVendaRepository.cs" />
     <Compile Include="VendaRepository.cs" />
