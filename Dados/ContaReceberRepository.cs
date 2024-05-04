@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dados
 {
-    class ContaReceberRepository
+    public class ContaReceberRepository
     {
         private IList<ContaReceber> _contaReceber = new List<ContaReceber>();
 

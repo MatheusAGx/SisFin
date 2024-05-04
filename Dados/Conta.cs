@@ -6,13 +6,26 @@ using System.Threading.Tasks;
 
 namespace Dados
 {
-    class Conta
+    public class Conta
     {
         public int id { get; set; }
         public string descricao { get; set; }
         public Categoria categoria { get; set; }
         public TipoConta tipoConta { get; set; }
         public bool status { get; set; }
+
+        public Conta(int id, string descricao, Categoria categoria, TipoConta tipoConta, bool status)
+        {
+            this.id = id;
+            this.descricao = descricao;
+            this.categoria = categoria;
+            this.tipoConta = tipoConta;
+            this.status = status;
+        }
+
+        public Conta()
+        {
+        }
 
         public override bool Equals(object obj)
         {

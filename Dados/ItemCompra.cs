@@ -6,10 +6,20 @@ using System.Threading.Tasks;
 
 namespace Dados
 {
-    class ItemCompra
+    public class ItemCompra
     {
         public int quantidade { get; set; }
         public decimal preco { get; set; }
+
+        public ItemCompra(int quantidade, decimal preco)
+        {
+            this.quantidade = quantidade;
+            this.preco = preco;
+        }
+
+        public ItemCompra()
+        {
+        }
 
         public override bool Equals(object obj)
         {

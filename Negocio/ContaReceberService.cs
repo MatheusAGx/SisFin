@@ -7,13 +7,13 @@ using Dados;
 
 namespace Negocio
 {
-    public class FornecedorService
+    class ContaReceberService
     {
-        private FornecedorRepository _repository;
+        private ContaReceberRepository _repository;
 
-        public FornecedorService()
+        public ContaReceberService()
         {
-            _repository = new FornecedorRepository();
+            _repository = new ContaReceberRepository();
         }
 
         public void Insert(int id, TipoPessoa tipoPessoa, string nome, string email, string cpf_cnpj, DateTime dataNascimento, string rua, int numero, string bairro, string complemento, string cep, string telefone, string celular, decimal limite)
@@ -21,39 +21,38 @@ namespace Negocio
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            var fornecedor = new Fornecedor();
+            var contaReceber = new ContaReceber();
 
 
-            _repository.Insert(fornecedor);
+            _repository.Insert(contaReceber);
 
         }
 
-        public void Insert(Fornecedor Fornecedor)
+        public void Insert(ContaReceber contaReceber)
         {
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            _repository.Insert(fornecedor);
+            _repository.Insert(contaReceber);
 
         }
 
-        public Fornecedor FindById(int id)
+        public ContaReceber FindById(int id)
         {
-            foreach (Fornecedor c in _repository.getAll())
+            foreach (ContaReceber c in _repository.getAll())
             {
                 if (c.id == id) return c;
             }
             return null;
         }
 
-        public IEnumerable<Fornecedor> ObterTodos()
+        public IEnumerable<ContaReceber> ObterTodos()
         {
             return _repository.ObterTodos();
         }
-        public List<Fornecedor> getAll()
+        public List<ContaReceber> getAll()
         {
-            return _repository.ObterTodos().ToList<Fornecedor>();
+            return _repository.ObterTodos().ToList<ContaReceber>();
         }
-
     }
 }

@@ -12,6 +12,17 @@ namespace Dados
          public string Nome { get; set; }
         public double Preco { get; set; }
 
+        public Produto(int id, string nome, double preco)
+        {
+            Id = id;
+            Nome = nome;
+            Preco = preco;
+        }
+
+        public Produto()
+        {
+        }
+
         public override bool Equals(object obj)
         {
             return obj is Produto produto &&

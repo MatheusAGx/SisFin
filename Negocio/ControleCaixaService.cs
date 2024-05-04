@@ -7,13 +7,13 @@ using Dados;
 
 namespace Negocio
 {
-    public class FornecedorService
+    public class ControleCaixaService
     {
-        private FornecedorRepository _repository;
+        private ControleCaixaRepository _repository;
 
-        public FornecedorService()
+        public ControleCaixaService()
         {
-            _repository = new FornecedorRepository();
+            _repository = new ControleCaixaRepository();
         }
 
         public void Insert(int id, TipoPessoa tipoPessoa, string nome, string email, string cpf_cnpj, DateTime dataNascimento, string rua, int numero, string bairro, string complemento, string cep, string telefone, string celular, decimal limite)
@@ -21,39 +21,38 @@ namespace Negocio
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            var fornecedor = new Fornecedor();
+            var controleCaixa = new ControleCaixa();
 
 
-            _repository.Insert(fornecedor);
+            _repository.Insert(controleCaixa);
 
         }
 
-        public void Insert(Fornecedor Fornecedor)
+        public void Insert(ControleCaixa controleCaixa)
         {
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            _repository.Insert(fornecedor);
+            _repository.Insert(controleCaixa);
 
         }
 
-        public Fornecedor FindById(int id)
+        public ControleCaixa FindById(int id)
         {
-            foreach (Fornecedor c in _repository.getAll())
+            foreach (ControleCaixa c in _repository.getAll())
             {
                 if (c.id == id) return c;
             }
             return null;
         }
 
-        public IEnumerable<Fornecedor> ObterTodos()
+        public IEnumerable<ControleCaixa> ObterTodos()
         {
             return _repository.ObterTodos();
         }
-        public List<Fornecedor> getAll()
+        public List<ControleCaixa> getAll()
         {
-            return _repository.ObterTodos().ToList<Fornecedor>();
+            return _repository.ObterTodos().ToList<ControleCaixa>();
         }
-
     }
 }

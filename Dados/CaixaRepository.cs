@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dados
 {
-    class CaixaRepository
+    public class CaixaRepository
     {
         private IList<Caixa> _caixa = new List<Caixa>();
 

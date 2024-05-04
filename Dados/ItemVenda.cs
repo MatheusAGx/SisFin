@@ -14,5 +14,44 @@ namespace Dados
         public double Quantidade { get; set; }
         public double Desconto { get; set; }
         public double Preco { get; set; }
+
+        public ItemVenda(int id, Venda venda, Produto produto, double quantidade, double desconto, double preco)
+        {
+            Id = id;
+            Venda = venda;
+            Produto = produto;
+            Quantidade = quantidade;
+            Desconto = desconto;
+            Preco = preco;
+        }
+
+        public ItemVenda()
+        {
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is ItemVenda venda &&
+                   Id == venda.Id &&
+                   EqualityComparer<Venda>.Default.Equals(Venda, venda.Venda) &&
+                   EqualityComparer<Produto>.Default.Equals(Produto, venda.Produto) &&
+                   Quantidade == venda.Quantidade &&
+                   Desconto == venda.Desconto &&
+                   Preco == venda.Preco;
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = -1006098578;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<Venda>.Default.GetHashCode(Venda);
+            hashCode = hashCode * -1521134295 + EqualityComparer<Produto>.Default.GetHashCode(Produto);
+            hashCode = hashCode * -1521134295 + Quantidade.GetHashCode();
+            hashCode = hashCode * -1521134295 + Desconto.GetHashCode();
+            hashCode = hashCode * -1521134295 + Preco.GetHashCode();
+            return hashCode;
+        }
     }
+
+
 }

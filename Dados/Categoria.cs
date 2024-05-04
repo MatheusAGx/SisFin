@@ -6,10 +6,20 @@ using System.Threading.Tasks;
 
 namespace Dados
 {
-    class Categoria
+    public class Categoria
     {
         public int id { get; set; }
         public string nome { get; set; }
+
+        public Categoria(int id, string nome)
+        {
+            this.id = id;
+            this.nome = nome;
+        }
+
+        public Categoria()
+        {
+        }
 
         public override bool Equals(object obj)
         {

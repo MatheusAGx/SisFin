@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dados
 {
-    class ContaPagar
+    public class ContaPagar
     {
         public int id { get; set; }
         public decimal valor { get; set; }
@@ -17,6 +17,23 @@ namespace Dados
         public DateTime dataPagamento { get; set; }
         public MeioPagamento meioPagamento { get; set; }
         public EstadoPagamento estadoPagamento { get; set; }
+
+        public ContaPagar(int id, decimal valor, Conta conta, Compra compra, DateTime dataCadastro, DateTime dataVencimento, DateTime dataPagamento, MeioPagamento meioPagamento, EstadoPagamento estadoPagamento)
+        {
+            this.id = id;
+            this.valor = valor;
+            this.conta = conta;
+            this.compra = compra;
+            this.dataCadastro = dataCadastro;
+            this.dataVencimento = dataVencimento;
+            this.dataPagamento = dataPagamento;
+            this.meioPagamento = meioPagamento;
+            this.estadoPagamento = estadoPagamento;
+        }
+
+        public ContaPagar()
+        {
+        }
 
         public override bool Equals(object obj)
         {

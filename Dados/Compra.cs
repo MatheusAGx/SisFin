@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dados
     {
-        class Compra
+    public class Compra
         {
             public int id { get; set; }
             public DateTime instante { get; set; }
@@ -14,7 +14,20 @@ namespace Dados
             public double desconto { get; set; }
             public double valor_total { get; set; }
 
-            public override bool Equals(object obj)
+        public Compra(int id, DateTime instante, string descricao, double desconto, double valor_total)
+        {
+            this.id = id;
+            this.instante = instante;
+            this.descricao = descricao;
+            this.desconto = desconto;
+            this.valor_total = valor_total;
+        }
+
+        public Compra()
+        {
+        }
+
+        public override bool Equals(object obj)
             {
                 return obj is Compra compra &&
                        id == compra.id &&

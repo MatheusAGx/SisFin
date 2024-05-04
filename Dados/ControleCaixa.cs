@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dados
 {
-    class ControleCaixa
+    public class ControleCaixa
     {
         public int id { get; set; }
         public ContaReceber contaReceber { get; set; }

@@ -23,6 +23,28 @@ namespace Dados
         public string celular { get; set; }
         public string email { get; set; }
 
+        public Fornecedor(int id, TipoPessoa tipoFornecedor, string cpf_cnpj, string razao_social, string nome, string rua, int numero, string bairro, string cidade, string complemento, string cep, string telefone, string celular, string email)
+        {
+            Id = id;
+            this.tipoFornecedor = tipoFornecedor;
+            this.cpf_cnpj = cpf_cnpj;
+            this.razao_social = razao_social;
+            this.nome = nome;
+            this.rua = rua;
+            this.numero = numero;
+            this.bairro = bairro;
+            this.cidade = cidade;
+            this.complemento = complemento;
+            this.cep = cep;
+            this.telefone = telefone;
+            this.celular = celular;
+            this.email = email;
+        }
+
+        public Fornecedor()
+        {
+        }
+
         public override bool Equals(object obj)
         {
             return obj is Fornecedor fornecedor &&

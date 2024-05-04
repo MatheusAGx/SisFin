@@ -7,13 +7,13 @@ using Dados;
 
 namespace Negocio
 {
-    public class FornecedorService
+    public class ItemCompraService
     {
-        private FornecedorRepository _repository;
+        private ItemCompraRepository _repository;
 
-        public FornecedorService()
+        public ItemCompraService()
         {
-            _repository = new FornecedorRepository();
+            _repository = new ItemCompraRepository();
         }
 
         public void Insert(int id, TipoPessoa tipoPessoa, string nome, string email, string cpf_cnpj, DateTime dataNascimento, string rua, int numero, string bairro, string complemento, string cep, string telefone, string celular, decimal limite)
@@ -21,39 +21,42 @@ namespace Negocio
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            var fornecedor = new Fornecedor();
+            var itemCompra = new ItemCompra();
 
 
-            _repository.Insert(fornecedor);
+            _repository.Insert(itemCompra);
 
         }
 
-        public void Insert(Fornecedor Fornecedor)
+        public void Insert(ItemCompra itemCompra)
         {
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            _repository.Insert(fornecedor);
+            _repository.Insert(itemCompra);
 
         }
 
-        public Fornecedor FindById(int id)
+        public ItemCompra FindById(int id)
         {
-            foreach (Fornecedor c in _repository.getAll())
+            foreach (ItemCompra c in _repository.getAll())
             {
                 if (c.id == id) return c;
             }
             return null;
         }
 
-        public IEnumerable<Fornecedor> ObterTodos()
+        public IEnumerable<ItemCompra> ObterTodos()
         {
             return _repository.ObterTodos();
         }
-        public List<Fornecedor> getAll()
+        public List<ItemCompra> getAll()
         {
-            return _repository.ObterTodos().ToList<Fornecedor>();
+            return _repository.ObterTodos().ToList<ItemCompra>();
         }
 
+        }
     }
+
+}
 }

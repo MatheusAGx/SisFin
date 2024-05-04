@@ -16,18 +16,13 @@ namespace Negocio
             _repository = new ClienteRepository();
         }
 
-        public void Insert(int id, TipoPessoa tipoPessoa, string nome, string email)
+        public void Insert(int id, TipoPessoa tipoPessoa, string nome, string email, string cpf_cnpj, DateTime dataNascimento, string rua, int numero, string bairro, string complemento, string cep, string telefone, string celular, decimal limite)
         {
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            var cliente = new Cliente
-            {
-                Id = id,
-                tipoPessoa = tipoPessoa,
-                Nome = nome,
-                Email = email
-            };
+            var cliente = new Cliente(id, tipoPessoa, nome, email, cpf_cnpj, dataNascimento, rua, numero, bairro, complemento, cep, telefone, celular, limite);
+        
 
             _repository.Insert(cliente);
 
@@ -46,7 +41,7 @@ namespace Negocio
         {
             foreach(Cliente c in _repository.getAll())
             {
-                if (c.Id == id) return c;
+                if (c.id == id) return c;
             }
             return null;
         }

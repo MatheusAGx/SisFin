@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dados
 {
-    class ItemCompraRepository
+    public class ItemCompraRepository
     {
         private IList<ItemCompra> _itemCompra = new List<ItemCompra>();
 

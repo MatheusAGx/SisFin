@@ -7,13 +7,13 @@ using Dados;
 
 namespace Negocio
 {
-    public class FornecedorService
+    class CategoriaService
     {
-        private FornecedorRepository _repository;
+        private CategoriaRepository _repository;
 
-        public FornecedorService()
+        public CategoriaService()
         {
-            _repository = new FornecedorRepository();
+            _repository = new CategoriaRepository();
         }
 
         public void Insert(int id, TipoPessoa tipoPessoa, string nome, string email, string cpf_cnpj, DateTime dataNascimento, string rua, int numero, string bairro, string complemento, string cep, string telefone, string celular, decimal limite)
@@ -21,39 +21,38 @@ namespace Negocio
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            var fornecedor = new Fornecedor();
+            var categoria = new Categoria();
 
 
-            _repository.Insert(fornecedor);
+            _repository.Insert(categoria);
 
         }
 
-        public void Insert(Fornecedor Fornecedor)
+        public void Insert(Categoria categoria)
         {
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            _repository.Insert(fornecedor);
+            _repository.Insert(categoria);
 
         }
 
-        public Fornecedor FindById(int id)
+        public Categoria FindById(int id)
         {
-            foreach (Fornecedor c in _repository.getAll())
+            foreach (Categoria c in _repository.getAll())
             {
                 if (c.id == id) return c;
             }
             return null;
         }
 
-        public IEnumerable<Fornecedor> ObterTodos()
+        public IEnumerable<Categoria> ObterTodos()
         {
             return _repository.ObterTodos();
         }
-        public List<Fornecedor> getAll()
+        public List<Categoria> getAll()
         {
-            return _repository.ObterTodos().ToList<Fornecedor>();
+            return _repository.ObterTodos().ToList<Categoria>();
         }
-
     }
 }

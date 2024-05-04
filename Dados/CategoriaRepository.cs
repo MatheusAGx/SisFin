@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dados
 {
-    class CategoriaRepository
+    public class CategoriaRepository
     {
         private IList<Categoria> _categoria = new List<Categoria>();
 

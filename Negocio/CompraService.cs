@@ -7,13 +7,13 @@ using Dados;
 
 namespace Negocio
 {
-    public class FornecedorService
+    class CompraService
     {
-        private FornecedorRepository _repository;
+        private CompraRepository _repository;
 
-        public FornecedorService()
+        public CompraService()
         {
-            _repository = new FornecedorRepository();
+            _repository = new CompraRepository();
         }
 
         public void Insert(int id, TipoPessoa tipoPessoa, string nome, string email, string cpf_cnpj, DateTime dataNascimento, string rua, int numero, string bairro, string complemento, string cep, string telefone, string celular, decimal limite)
@@ -21,39 +21,38 @@ namespace Negocio
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            var fornecedor = new Fornecedor();
+            var compra = new Compra();
 
 
-            _repository.Insert(fornecedor);
+            _repository.Insert(compra);
 
         }
 
-        public void Insert(Fornecedor Fornecedor)
+        public void Insert(Compra compra)
         {
             // Insira as validações e regras de negócio aqui
             // Por exemplo, verificar se o email já está cadastrado
 
-            _repository.Insert(fornecedor);
+            _repository.Insert(compra);
 
         }
 
-        public Fornecedor FindById(int id)
+        public Compra FindById(int id)
         {
-            foreach (Fornecedor c in _repository.getAll())
+            foreach (Compra c in _repository.getAll())
             {
                 if (c.id == id) return c;
             }
             return null;
         }
 
-        public IEnumerable<Fornecedor> ObterTodos()
+        public IEnumerable<Compra> ObterTodos()
         {
             return _repository.ObterTodos();
         }
-        public List<Fornecedor> getAll()
+        public List<Compra> getAll()
         {
-            return _repository.ObterTodos().ToList<Fornecedor>();
+            return _repository.ObterTodos().ToList<Compra>();
         }
-
     }
 }
